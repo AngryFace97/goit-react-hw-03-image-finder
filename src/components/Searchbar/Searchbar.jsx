@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './Searchbar.module.css';
+import PropTypes from 'prop-types';
 
 const INITIAL_STATE = {
   searchQuery: '',
@@ -44,6 +45,10 @@ export class Searchbar extends Component {
       </header>
     );
   }
+}
+
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 }
  
 export default Searchbar;
